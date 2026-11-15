@@ -25,13 +25,13 @@
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            obsidian: '#090909',
-            card: '#111111',
-            gold: {
-              DEFAULT: '#c5a880',
-              light: '#dfc7a5',
-              dark: '#9d8058',
-              dim: 'rgba(197, 168, 128, 0.15)'
+            blush: {
+              DEFAULT: '#ece5df',
+              card: '#e2d9d1',
+              dark: '#2b1f1a',
+              muted: '#5e4d46',
+              border: '#d3c4bb',
+              accent: '#8c5847'
             }
           }
         }
@@ -40,9 +40,18 @@
   </script>
 
   <style>
+    :root {
+      --bg: #ece5df;
+      --card-bg: #e2d9d1;
+      --text-main: #2b1f1a;
+      --text-muted: #5e4d46;
+      --border-color: #d3c4bb;
+      --accent: #8c5847;
+    }
+
     body {
-      background-color: #090909;
-      color: #ede8df;
+      background-color: var(--bg);
+      color: var(--text-main);
       font-family: 'Plus Jakarta Sans', sans-serif;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
@@ -54,38 +63,34 @@
     }
 
     .hairline {
-      border-color: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-color);
     }
 
-    .gold-accent {
-      color: #c5a880;
+    .editorial-btn {
+      border: 1px solid var(--text-main);
+      color: var(--text-main);
+      transition: all 0.3s ease;
     }
-
-    .gold-border {
-      border-color: rgba(197, 168, 128, 0.4);
-    }
-
-    .gold-btn:hover {
-      background-color: #c5a880;
-      color: #090909;
-      border-color: #c5a880;
+    .editorial-btn:hover {
+      background-color: var(--text-main);
+      color: var(--bg);
     }
   </style>
 </head>
-<body class="selection:bg-[#c5a880] selection:text-black px-6 sm:px-12 md:px-20 lg:px-28 py-10 max-w-5xl mx-auto flex flex-col justify-between">
+<body class="selection:bg-[#2b1f1a] selection:text-[#ece5df] px-6 sm:px-12 md:px-20 lg:px-28 py-10 max-w-5xl mx-auto flex flex-col justify-between">
 
   <!-- TOP HEADER / NAV BAR -->
   <header class="flex items-center justify-between py-4 mb-16 sm:mb-24">
     <!-- Brand / Name -->
-    <a href="#" class="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#c5a880] font-medium hover:opacity-80 transition">
+    <a href="#" class="text-xs sm:text-sm uppercase tracking-[0.25em] font-medium transition hover:opacity-75" style="color: var(--text-main)">
       [DIDAR LAHIRY]
     </a>
 
     <!-- Nav Links -->
-    <nav class="flex items-center gap-6 sm:gap-10 text-[11px] uppercase tracking-[0.2em] text-[#a09c94]">
-      <a href="#work" class="hover:text-[#ede8df] transition">WORK</a>
-      <a href="#about" class="hover:text-[#ede8df] transition">ABOUT</a>
-      <a href="#contact" class="hover:text-[#ede8df] transition">CONTACT</a>
+    <nav class="flex items-center gap-6 sm:gap-10 text-[11px] uppercase tracking-[0.2em]" style="color: var(--text-muted)">
+      <a href="#work" class="hover:text-[#2b1f1a] transition">WORK</a>
+      <a href="#about" class="hover:text-[#2b1f1a] transition">ABOUT</a>
+      <a href="#contact" class="hover:text-[#2b1f1a] transition">CONTACT</a>
     </nav>
   </header>
 
@@ -95,18 +100,18 @@
     <!-- HERO SECTION -->
     <section class="text-center space-y-6 pt-4 sm:pt-8">
       <!-- Tagline -->
-      <span class="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#c5a880] font-medium block">
+      <span class="text-[10px] sm:text-xs uppercase tracking-[0.3em] font-semibold block" style="color: var(--accent)">
         PORTFOLIO · EST. 2026
       </span>
 
       <!-- Main Headline -->
-      <h1 class="text-4xl sm:text-6xl md:text-7xl font-normal font-luxury leading-[1.08] max-w-3xl mx-auto text-[#f5f2eb]">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-normal font-luxury leading-[1.08] max-w-3xl mx-auto" style="color: var(--text-main)">
         Quiet craft for<br />
         <span class="italic font-light">exacting clients</span>
       </h1>
 
       <!-- One-line Positioning Statement -->
-      <p class="text-xs sm:text-sm text-[#9f9b93] max-w-xl mx-auto leading-relaxed tracking-wide font-light">
+      <p class="text-xs sm:text-sm max-w-xl mx-auto leading-relaxed tracking-wide font-light" style="color: var(--text-muted)">
         AI Specialist & Web Developer in Dhaka. Engineering intelligent web applications, autonomous agent workflows, and refined digital architecture for founders and forward-thinking clients.
       </p>
 
@@ -115,7 +120,7 @@
         <a 
           href="https://wa.me/8801631188500?text=Hello%20Didar,%20I%20would%20like%20to%20enquire%20about%20a%20project." 
           target="_blank"
-          class="gold-btn inline-block px-10 py-3.5 border border-[#c5a880]/60 text-[#c5a880] text-xs uppercase tracking-[0.25em] font-medium transition duration-300"
+          class="editorial-btn inline-block px-10 py-3.5 text-xs uppercase tracking-[0.25em] font-semibold transition duration-300 shadow-sm"
         >
           ENQUIRE
         </a>
@@ -129,10 +134,10 @@
     <section id="work" class="space-y-10">
       <!-- Section Title Row -->
       <div class="flex items-baseline justify-between">
-        <h2 class="text-3xl sm:text-4xl font-normal font-luxury text-[#f5f2eb]">
+        <h2 class="text-3xl sm:text-4xl font-normal font-luxury" style="color: var(--text-main)">
           Selected Work
         </h2>
-        <span class="text-xs text-[#8a857b] font-mono tracking-wider">
+        <span class="text-xs font-mono tracking-wider" style="color: var(--text-muted)">
           2023 — 2026
         </span>
       </div>
@@ -143,21 +148,20 @@
         <!-- PROJECT ONE -->
         <a href="https://wa.me/8801631188500" target="_blank" class="group block space-y-4">
           <!-- Thumbnail Frame -->
-          <div class="aspect-[3/4] w-full bg-[#141414] overflow-hidden border hairline relative group-hover:border-[#c5a880]/40 transition duration-500">
+          <div class="aspect-[3/4] w-full overflow-hidden border hairline rounded-sm relative group-hover:border-[#2b1f1a] transition duration-500" style="background-color: var(--card-bg)">
             <img 
               src="assets/proj1.webp" 
               alt="Drishti AI Platform" 
-              class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
-              onerror="this.parentElement.style.backgroundColor='#181818'"
+              class="w-full h-full object-cover grayscale opacity-85 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40"></div>
           </div>
           <!-- Titles -->
           <div class="space-y-1 text-left">
-            <h3 class="text-lg sm:text-xl font-luxury text-[#ede8df] group-hover:text-[#c5a880] transition">
+            <h3 class="text-lg sm:text-xl font-luxury group-hover:opacity-75 transition" style="color: var(--text-main)">
               [DRISHTI AI PLATFORM]
             </h3>
-            <p class="text-[11px] text-[#8a857b] tracking-wider uppercase">
+            <p class="text-[11px] tracking-wider uppercase" style="color: var(--text-muted)">
               Multimodal AI & Full-Stack · 2026
             </p>
           </div>
@@ -166,21 +170,20 @@
         <!-- PROJECT TWO -->
         <a href="https://wa.me/8801631188500" target="_blank" class="group block space-y-4 md:mt-6">
           <!-- Thumbnail Frame -->
-          <div class="aspect-[3/4] w-full bg-[#141414] overflow-hidden border hairline relative group-hover:border-[#c5a880]/40 transition duration-500">
+          <div class="aspect-[3/4] w-full overflow-hidden border hairline rounded-sm relative group-hover:border-[#2b1f1a] transition duration-500" style="background-color: var(--card-bg)">
             <img 
               src="assets/proj2.webp" 
               alt="Prodesk Cloud Delivery" 
-              class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
-              onerror="this.parentElement.style.backgroundColor='#181818'"
+              class="w-full h-full object-cover grayscale opacity-85 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40"></div>
           </div>
           <!-- Titles -->
           <div class="space-y-1 text-left">
-            <h3 class="text-lg sm:text-xl font-luxury text-[#ede8df] group-hover:text-[#c5a880] transition">
+            <h3 class="text-lg sm:text-xl font-luxury group-hover:opacity-75 transition" style="color: var(--text-main)">
               [PRODESK ARCHITECTURE]
             </h3>
-            <p class="text-[11px] text-[#8a857b] tracking-wider uppercase">
+            <p class="text-[11px] tracking-wider uppercase" style="color: var(--text-muted)">
               High-Speed Web Systems · 2025
             </p>
           </div>
@@ -189,21 +192,20 @@
         <!-- PROJECT THREE -->
         <a href="https://wa.me/8801631188500" target="_blank" class="group block space-y-4">
           <!-- Thumbnail Frame -->
-          <div class="aspect-[3/4] w-full bg-[#141414] overflow-hidden border hairline relative group-hover:border-[#c5a880]/40 transition duration-500">
+          <div class="aspect-[3/4] w-full overflow-hidden border hairline rounded-sm relative group-hover:border-[#2b1f1a] transition duration-500" style="background-color: var(--card-bg)">
             <img 
               src="assets/proj3.webp" 
               alt="FloodSpaces AI" 
-              class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
-              onerror="this.parentElement.style.backgroundColor='#181818'"
+              class="w-full h-full object-cover grayscale opacity-85 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40"></div>
           </div>
           <!-- Titles -->
           <div class="space-y-1 text-left">
-            <h3 class="text-lg sm:text-xl font-luxury text-[#ede8df] group-hover:text-[#c5a880] transition">
+            <h3 class="text-lg sm:text-xl font-luxury group-hover:opacity-75 transition" style="color: var(--text-main)">
               [FLOODSPACES SYSTEM]
             </h3>
-            <p class="text-[11px] text-[#8a857b] tracking-wider uppercase">
+            <p class="text-[11px] tracking-wider uppercase" style="color: var(--text-muted)">
               Geospatial AI & Workflow · 2024
             </p>
           </div>
@@ -219,28 +221,28 @@
     <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
       <!-- Left Column Title -->
       <div class="md:col-span-4">
-        <h2 class="text-3xl sm:text-4xl font-normal font-luxury text-[#f5f2eb]">
+        <h2 class="text-3xl sm:text-4xl font-normal font-luxury" style="color: var(--text-main)">
           About
         </h2>
       </div>
 
       <!-- Right Column Description & Portrait -->
       <div class="md:col-span-8 space-y-6">
-        <p class="text-sm sm:text-base text-[#b8b3a9] leading-relaxed font-light">
+        <p class="text-sm sm:text-base leading-relaxed font-light" style="color: var(--text-main)">
           I am Didar Lahiry, an AI Specialist and Full-Stack Web Developer based in Dhaka. My craft centers on transforming ambitious software visions into fast, robust, and dependable web applications.
         </p>
-        <p class="text-xs sm:text-sm text-[#8a857b] leading-relaxed font-light">
+        <p class="text-xs sm:text-sm leading-relaxed font-light" style="color: var(--text-muted)">
           Whether designing custom LLM-powered interfaces, engineering automated backend pipelines, or crafting bespoke landing pages with uncompromising attention to detail, I partner with clients who value precision, discretion, and quiet excellence.
         </p>
 
         <!-- Elegant Portrait Preview -->
         <div class="pt-4 flex items-center gap-5">
-          <div class="w-16 h-20 rounded-sm overflow-hidden border hairline grayscale shrink-0">
+          <div class="w-16 h-20 rounded-sm overflow-hidden border hairline grayscale shrink-0" style="background-color: var(--card-bg)">
             <img src="assets/didar.jpg" alt="Didar Lahiry" class="w-full h-full object-cover object-top" />
           </div>
           <div class="space-y-0.5">
-            <span class="text-xs uppercase tracking-widest text-[#c5a880] font-medium block">Didar Lahiry</span>
-            <span class="text-[11px] text-[#78746c] block">Founder & Engineer · Dhaka (GMT+6)</span>
+            <span class="text-xs uppercase tracking-widest font-semibold block" style="color: var(--text-main)">Didar Lahiry</span>
+            <span class="text-[11px] block" style="color: var(--text-muted)">Founder & Engineer · Dhaka (GMT+6)</span>
           </div>
         </div>
       </div>
@@ -251,36 +253,37 @@
 
     <!-- SECTION 3: BY APPOINTMENT / CONTACT -->
     <section id="contact" class="text-center space-y-6 py-8">
-      <h2 class="text-4xl sm:text-5xl md:text-6xl font-normal font-luxury text-[#f5f2eb]">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-normal font-luxury" style="color: var(--text-main)">
         By Appointment
       </h2>
 
-      <!-- Email in Gold -->
-      <div class="space-y-1">
+      <!-- Email in Accent Tone -->
+      <div class="space-y-1.5">
         <a 
           href="mailto:itsdidar2005@gmail.com" 
-          class="text-sm sm:text-base text-[#c5a880] tracking-wider font-light hover:underline underline-offset-8 transition"
+          class="text-sm sm:text-base tracking-wider font-medium hover:underline underline-offset-8 transition block"
+          style="color: var(--accent)"
         >
           itsdidar2005@gmail.com
         </a>
-        <p class="text-xs text-[#8a857b] tracking-widest">
+        <p class="text-xs tracking-widest" style="color: var(--text-muted)">
           +880 1631-188500
         </p>
       </div>
 
       <!-- Footer Social Links -->
-      <div class="pt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#8a857b]">
-        <a href="https://wa.me/8801631188500" target="_blank" class="hover:text-[#c5a880] transition">WHATSAPP</a>
-        <a href="https://linkedin.com" target="_blank" class="hover:text-[#c5a880] transition">LINKEDIN</a>
-        <a href="https://github.com" target="_blank" class="hover:text-[#c5a880] transition">GITHUB</a>
-        <a href="https://facebook.com" target="_blank" class="hover:text-[#c5a880] transition">FACEBOOK</a>
+      <div class="pt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-[10px] sm:text-xs uppercase tracking-[0.25em]" style="color: var(--text-muted)">
+        <a href="https://wa.me/8801631188500" target="_blank" class="hover:text-[#2b1f1a] transition">WHATSAPP</a>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-[#2b1f1a] transition">LINKEDIN</a>
+        <a href="https://github.com" target="_blank" class="hover:text-[#2b1f1a] transition">GITHUB</a>
+        <a href="https://facebook.com" target="_blank" class="hover:text-[#2b1f1a] transition">FACEBOOK</a>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="mt-20 pt-8 border-t hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#6b6760] tracking-wider uppercase">
+  <footer class="mt-20 pt-8 border-t hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] tracking-wider uppercase" style="color: var(--text-muted)">
     <p>© 2026 Didar Lahiry. All rights reserved.</p>
     <p class="font-mono text-[10px]">Exacting Digital Craft</p>
   </footer>
