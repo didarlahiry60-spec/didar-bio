@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Didar Lahiry — AI Specialist & Web Developer</title>
+  <title>Didar Lahiry — Quiet craft for exacting clients</title>
   
-  <!-- Google Fonts: Newsreader (Editorial Serif), Instrument Serif, and Plus Jakarta Sans -->
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -21,9 +21,18 @@
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Newsreader"', '"Instrument Serif"', 'Georgia', 'serif'],
-            display: ['"Instrument Serif"', '"Newsreader"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#090909',
+            card: '#111111',
+            gold: {
+              DEFAULT: '#c5a880',
+              light: '#dfc7a5',
+              dark: '#9d8058',
+              dim: 'rgba(197, 168, 128, 0.15)'
+            }
           }
         }
       }
@@ -31,240 +40,250 @@
   </script>
 
   <style>
-    /* BLUSH EDITORIAL THEME PALETTE */
-    :root {
-      --bg: #ece5df;
-      --card-bg: #e2d9d1;
-      --text-main: #2b1f1a;
-      --text-muted: #5e4d46;
-      --border-color: #d3c4bb;
-      --accent: #4a2a22;
-      --tag-bg: #ddd0c7;
-      --photo-filter: contrast(102%) brightness(99%);
-    }
-
     body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      min-height: 100vh;
+      background-color: #090909;
+      color: #ede8df;
       font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .border-theme {
-      border-color: var(--border-color);
+    .font-luxury {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      letter-spacing: -0.015em;
     }
 
-    .text-muted-custom {
-      color: var(--text-muted);
-    }
-
-    .bg-tag {
-      background-color: var(--tag-bg);
-    }
-
-    /* Editorial Headline Styling */
-    .font-editorial {
-      font-family: 'Newsreader', 'Instrument Serif', Georgia, serif;
-      letter-spacing: -0.025em;
-    }
-
-    /* Fine hairline dividers */
     .hairline {
-      border-bottom: 1px solid var(--border-color);
+      border-color: rgba(255, 255, 255, 0.08);
     }
 
-    /* Photo Treatment for Editorial Look */
-    .editorial-portrait {
-      filter: var(--photo-filter);
-      transition: filter 0.4s ease, transform 0.3s ease;
+    .gold-accent {
+      color: #c5a880;
     }
-    .editorial-portrait:hover {
-      filter: contrast(105%) saturate(100%);
-      transform: scale(1.015);
+
+    .gold-border {
+      border-color: rgba(197, 168, 128, 0.4);
+    }
+
+    .gold-btn:hover {
+      background-color: #c5a880;
+      color: #090909;
+      border-color: #c5a880;
     }
   </style>
 </head>
-<body class="selection:bg-slate-900 selection:text-white p-6 sm:p-12 md:p-16 lg:p-20 max-w-3xl mx-auto flex flex-col justify-between">
+<body class="selection:bg-[#c5a880] selection:text-black px-6 sm:px-12 md:px-20 lg:px-28 py-10 max-w-5xl mx-auto flex flex-col justify-between">
 
-  <!-- TOP DECORATIVE DOT & STATUS -->
-  <header class="flex items-center justify-between mb-10 sm:mb-14">
-    <!-- Signature Dot -->
-    <div class="flex items-center gap-3">
-      <span class="w-3.5 h-3.5 rounded-full inline-block opacity-90" style="background-color: var(--text-main)"></span>
-      <span class="text-xs uppercase tracking-widest font-semibold opacity-70">WhatsApp Business Profile</span>
-    </div>
+  <!-- TOP HEADER / NAV BAR -->
+  <header class="flex items-center justify-between py-4 mb-16 sm:mb-24">
+    <!-- Brand / Name -->
+    <a href="#" class="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#c5a880] font-medium hover:opacity-80 transition">
+      [DIDAR LAHIRY]
+    </a>
 
-    <!-- Location & Status -->
-    <div class="flex items-center gap-2 text-xs text-muted-custom">
-      <span class="w-2 h-2 rounded-full bg-emerald-600 inline-block animate-pulse"></span>
-      <span>Dhaka, BD • Open to projects</span>
-    </div>
+    <!-- Nav Links -->
+    <nav class="flex items-center gap-6 sm:gap-10 text-[11px] uppercase tracking-[0.2em] text-[#a09c94]">
+      <a href="#work" class="hover:text-[#ede8df] transition">WORK</a>
+      <a href="#about" class="hover:text-[#ede8df] transition">ABOUT</a>
+      <a href="#contact" class="hover:text-[#ede8df] transition">CONTACT</a>
+    </nav>
   </header>
 
   <!-- MAIN EDITORIAL CONTENT -->
-  <main class="space-y-12 sm:space-y-16">
+  <main class="space-y-24 sm:space-y-32">
 
-    <!-- HERO SECTION: NAME, PHOTO & ELEVATOR STATEMENT -->
-    <section class="space-y-6">
-      
-      <!-- Big Name Heading -->
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-normal font-editorial tracking-tight" style="color: var(--text-main)">
-        Didar Lahiry
+    <!-- HERO SECTION -->
+    <section class="text-center space-y-6 pt-4 sm:pt-8">
+      <!-- Tagline -->
+      <span class="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-[#c5a880] font-medium block">
+        PORTFOLIO · EST. 2026
+      </span>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-normal font-luxury leading-[1.08] max-w-3xl mx-auto text-[#f5f2eb]">
+        Quiet craft for<br />
+        <span class="italic font-light">exacting clients</span>
       </h1>
 
-      <!-- Bio / Identity Statement -->
-      <p class="text-lg sm:text-xl text-muted-custom leading-relaxed max-w-2xl font-light font-editorial italic">
-        AI Specialist & Web Developer in Dhaka. I build intelligent web applications, AI automations, and purposeful digital systems that make complex workflows feel effortless.
+      <!-- One-line Positioning Statement -->
+      <p class="text-xs sm:text-sm text-[#9f9b93] max-w-xl mx-auto leading-relaxed tracking-wide font-light">
+        AI Specialist & Web Developer in Dhaka. Engineering intelligent web applications, autonomous agent workflows, and refined digital architecture for founders and forward-thinking clients.
       </p>
 
-      <!-- EDITORIAL PORTRAIT SECTION -->
-      <div class="pt-2">
-        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-5 rounded-2xl border border-theme" style="background-color: var(--card-bg)">
-          
-          <!-- Image with Editorial border -->
-          <div class="relative group shrink-0">
-            <div class="w-32 h-40 sm:w-36 sm:h-44 rounded-xl overflow-hidden border border-theme shadow-md bg-black/10">
-              <img 
-                id="main-photo"
-                src="assets/didar.jpg?v=2" 
-                alt="Didar Lahiry" 
-                class="w-full h-full object-cover object-top editorial-portrait"
-              />
-            </div>
-            <span class="absolute bottom-2 right-2 w-3.5 h-3.5 rounded-full bg-emerald-600 border-2 border-white" title="Active"></span>
-          </div>
+      <!-- Enquire Button (Direct WhatsApp Action) -->
+      <div class="pt-6">
+        <a 
+          href="https://wa.me/8801631188500?text=Hello%20Didar,%20I%20would%20like%20to%20enquire%20about%20a%20project." 
+          target="_blank"
+          class="gold-btn inline-block px-10 py-3.5 border border-[#c5a880]/60 text-[#c5a880] text-xs uppercase tracking-[0.25em] font-medium transition duration-300"
+        >
+          ENQUIRE
+        </a>
+      </div>
+    </section>
 
-          <!-- Profile Details & Professional Context -->
-          <div class="space-y-2 text-left self-center">
-            <div class="flex items-center gap-2">
-              <span class="text-xs uppercase tracking-wider font-bold opacity-80">Didar Lahiry</span>
-              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-tag border border-theme font-medium">Founder & Engineer</span>
-            </div>
-            <h3 class="text-xl sm:text-2xl font-editorial tracking-tight" style="color: var(--text-main)">
-              Building modern intelligence into production web systems.
+    <!-- DIVIDER -->
+    <div class="border-b hairline"></div>
+
+    <!-- SECTION 1: SELECTED WORK -->
+    <section id="work" class="space-y-10">
+      <!-- Section Title Row -->
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-3xl sm:text-4xl font-normal font-luxury text-[#f5f2eb]">
+          Selected Work
+        </h2>
+        <span class="text-xs text-[#8a857b] font-mono tracking-wider">
+          2023 — 2026
+        </span>
+      </div>
+
+      <!-- 3-Column Project Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-6 lg:gap-8 items-start">
+        
+        <!-- PROJECT ONE -->
+        <a href="https://wa.me/8801631188500" target="_blank" class="group block space-y-4">
+          <!-- Thumbnail Frame -->
+          <div class="aspect-[3/4] w-full bg-[#141414] overflow-hidden border hairline relative group-hover:border-[#c5a880]/40 transition duration-500">
+            <img 
+              src="assets/proj1.webp" 
+              alt="Drishti AI Platform" 
+              class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
+              onerror="this.parentElement.style.backgroundColor='#181818'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+          </div>
+          <!-- Titles -->
+          <div class="space-y-1 text-left">
+            <h3 class="text-lg sm:text-xl font-luxury text-[#ede8df] group-hover:text-[#c5a880] transition">
+              [DRISHTI AI PLATFORM]
             </h3>
-            <p class="text-xs sm:text-sm text-muted-custom leading-relaxed">
-              Based in Dhaka, collaborating with founders, businesses, and creators worldwide on bespoke AI solutions, automations, and fast web infrastructure.
+            <p class="text-[11px] text-[#8a857b] tracking-wider uppercase">
+              Multimodal AI & Full-Stack · 2026
             </p>
           </div>
-        </div>
-      </div>
+        </a>
 
-    </section>
-
-    <!-- SECTION 1: WHAT I DO (CAPABILITIES) -->
-    <section class="space-y-4">
-      <div class="flex items-center justify-between pb-2">
-        <h2 class="text-xs uppercase tracking-wider font-bold opacity-80">
-          Selected Capabilities & Focus
-        </h2>
-        <span class="text-xs text-muted-custom font-mono">01</span>
-      </div>
-
-      <div class="divide-y border-t border-b border-theme">
-        
-        <!-- Row 1 -->
-        <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group">
-          <div class="space-y-1">
-            <h3 class="text-2xl sm:text-3xl font-editorial tracking-tight group-hover:opacity-75 transition">
-              AI-Powered Web Applications
-            </h3>
-            <p class="text-xs text-muted-custom">LLM integrations, agentic workflows, and intelligent web applications built for scale.</p>
+        <!-- PROJECT TWO -->
+        <a href="https://wa.me/8801631188500" target="_blank" class="group block space-y-4 md:mt-6">
+          <!-- Thumbnail Frame -->
+          <div class="aspect-[3/4] w-full bg-[#141414] overflow-hidden border hairline relative group-hover:border-[#c5a880]/40 transition duration-500">
+            <img 
+              src="assets/proj2.webp" 
+              alt="Prodesk Cloud Delivery" 
+              class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
+              onerror="this.parentElement.style.backgroundColor='#181818'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
           </div>
-          <span class="text-xs text-muted-custom font-mono shrink-0 sm:text-right">
-            Full-Stack, 2026
-          </span>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group">
-          <div class="space-y-1">
-            <h3 class="text-2xl sm:text-3xl font-editorial tracking-tight group-hover:opacity-75 transition">
-              High-Converting Websites & Landing Pages
+          <!-- Titles -->
+          <div class="space-y-1 text-left">
+            <h3 class="text-lg sm:text-xl font-luxury text-[#ede8df] group-hover:text-[#c5a880] transition">
+              [PRODESK ARCHITECTURE]
             </h3>
-            <p class="text-xs text-muted-custom">Refined digital craft, fast responsive performance, and conversion-focused web architecture.</p>
+            <p class="text-[11px] text-[#8a857b] tracking-wider uppercase">
+              High-Speed Web Systems · 2025
+            </p>
           </div>
-          <span class="text-xs text-muted-custom font-mono shrink-0 sm:text-right">
-            Web Architecture, 2025–26
-          </span>
-        </div>
+        </a>
 
-        <!-- Row 3 -->
-        <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group">
-          <div class="space-y-1">
-            <h3 class="text-2xl sm:text-3xl font-editorial tracking-tight group-hover:opacity-75 transition">
-              Workflow & Agent Automations
-            </h3>
-            <p class="text-xs text-muted-custom">Custom API pipelines, WhatsApp & CRM integrations, and automated systems that eliminate manual hours.</p>
+        <!-- PROJECT THREE -->
+        <a href="https://wa.me/8801631188500" target="_blank" class="group block space-y-4">
+          <!-- Thumbnail Frame -->
+          <div class="aspect-[3/4] w-full bg-[#141414] overflow-hidden border hairline relative group-hover:border-[#c5a880]/40 transition duration-500">
+            <img 
+              src="assets/proj3.webp" 
+              alt="FloodSpaces AI" 
+              class="w-full h-full object-cover grayscale opacity-75 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105 transition duration-700"
+              onerror="this.parentElement.style.backgroundColor='#181818'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
           </div>
-          <span class="text-xs text-muted-custom font-mono shrink-0 sm:text-right">
-            Automation & Agents, 2026
-          </span>
-        </div>
-
-        <!-- Row 4 -->
-        <div class="py-4 sm:py-5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group">
-          <div class="space-y-1">
-            <h3 class="text-2xl sm:text-3xl font-editorial tracking-tight group-hover:opacity-75 transition">
-              System Consulting & Technical Problem Solving
+          <!-- Titles -->
+          <div class="space-y-1 text-left">
+            <h3 class="text-lg sm:text-xl font-luxury text-[#ede8df] group-hover:text-[#c5a880] transition">
+              [FLOODSPACES SYSTEM]
             </h3>
-            <p class="text-xs text-muted-custom">Architecture guidance, deployment troubleshooting, performance audits, and rapid bug resolution.</p>
+            <p class="text-[11px] text-[#8a857b] tracking-wider uppercase">
+              Geospatial AI & Workflow · 2024
+            </p>
           </div>
-          <span class="text-xs text-muted-custom font-mono shrink-0 sm:text-right">
-            Consulting & Debugging, 2024–26
-          </span>
-        </div>
+        </a>
 
       </div>
     </section>
 
-    <!-- SECTION 2: DIRECT CONTACT -->
-    <section class="space-y-6 pt-2">
-      <div class="flex items-center justify-between pb-2 border-b border-theme">
-        <h2 class="text-xs uppercase tracking-wider font-bold opacity-80">
-          Get in Touch
+    <!-- DIVIDER -->
+    <div class="border-b hairline"></div>
+
+    <!-- SECTION 2: ABOUT -->
+    <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+      <!-- Left Column Title -->
+      <div class="md:col-span-4">
+        <h2 class="text-3xl sm:text-4xl font-normal font-luxury text-[#f5f2eb]">
+          About
         </h2>
-        <span class="text-xs text-muted-custom font-mono">02</span>
       </div>
 
-      <div class="space-y-4">
-        <!-- Main WhatsApp Direct Action -->
-        <div>
-          <a 
-            href="https://wa.me/8801631188500?text=Hello%20Didar,%20I%20saw%20your%20profile%20and%20want%20to%20discuss%20a%20project!" 
-            target="_blank"
-            class="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-theme text-sm font-semibold transition hover:opacity-90 active:scale-95 shadow-sm"
-            style="background-color: var(--text-main); color: var(--bg)"
-          >
-            <i class="fa-brands fa-whatsapp text-lg"></i>
-            <span>Chat on WhatsApp (+880 1631-188500) ↗</span>
-          </a>
-        </div>
+      <!-- Right Column Description & Portrait -->
+      <div class="md:col-span-8 space-y-6">
+        <p class="text-sm sm:text-base text-[#b8b3a9] leading-relaxed font-light">
+          I am Didar Lahiry, an AI Specialist and Full-Stack Web Developer based in Dhaka. My craft centers on transforming ambitious software visions into fast, robust, and dependable web applications.
+        </p>
+        <p class="text-xs sm:text-sm text-[#8a857b] leading-relaxed font-light">
+          Whether designing custom LLM-powered interfaces, engineering automated backend pipelines, or crafting bespoke landing pages with uncompromising attention to detail, I partner with clients who value precision, discretion, and quiet excellence.
+        </p>
 
-        <!-- Email & Call links in clean editorial style -->
-        <div class="space-y-2 text-sm text-muted-custom pt-2">
-          <p>
-            Email: 
-            <a href="mailto:itsdidar2005@gmail.com" class="font-semibold underline decoration-1 underline-offset-4 hover:opacity-75" style="color: var(--text-main)">
-              itsdidar2005@gmail.com
-            </a>
-          </p>
-          <p>
-            Phone / Direct Call: 
-            <a href="tel:+8801631188500" class="font-semibold underline decoration-1 underline-offset-4 hover:opacity-75" style="color: var(--text-main)">
-              +880 1631-188500
-            </a>
-          </p>
+        <!-- Elegant Portrait Preview -->
+        <div class="pt-4 flex items-center gap-5">
+          <div class="w-16 h-20 rounded-sm overflow-hidden border hairline grayscale shrink-0">
+            <img src="assets/didar.jpg" alt="Didar Lahiry" class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-xs uppercase tracking-widest text-[#c5a880] font-medium block">Didar Lahiry</span>
+            <span class="text-[11px] text-[#78746c] block">Founder & Engineer · Dhaka (GMT+6)</span>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="border-b hairline"></div>
+
+    <!-- SECTION 3: BY APPOINTMENT / CONTACT -->
+    <section id="contact" class="text-center space-y-6 py-8">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-normal font-luxury text-[#f5f2eb]">
+        By Appointment
+      </h2>
+
+      <!-- Email in Gold -->
+      <div class="space-y-1">
+        <a 
+          href="mailto:itsdidar2005@gmail.com" 
+          class="text-sm sm:text-base text-[#c5a880] tracking-wider font-light hover:underline underline-offset-8 transition"
+        >
+          itsdidar2005@gmail.com
+        </a>
+        <p class="text-xs text-[#8a857b] tracking-widest">
+          +880 1631-188500
+        </p>
+      </div>
+
+      <!-- Footer Social Links -->
+      <div class="pt-6 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-[10px] sm:text-xs uppercase tracking-[0.25em] text-[#8a857b]">
+        <a href="https://wa.me/8801631188500" target="_blank" class="hover:text-[#c5a880] transition">WHATSAPP</a>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-[#c5a880] transition">LINKEDIN</a>
+        <a href="https://github.com" target="_blank" class="hover:text-[#c5a880] transition">GITHUB</a>
+        <a href="https://facebook.com" target="_blank" class="hover:text-[#c5a880] transition">FACEBOOK</a>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="mt-20 pt-8 border-t border-theme flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-custom">
+  <footer class="mt-20 pt-8 border-t hairline flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#6b6760] tracking-wider uppercase">
     <p>© 2026 Didar Lahiry. All rights reserved.</p>
-    <p class="font-mono text-[11px]">Editorial Bio • WhatsApp Business</p>
+    <p class="font-mono text-[10px]">Exacting Digital Craft</p>
   </footer>
+
 </body>
 </html>
